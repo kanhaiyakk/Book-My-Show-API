@@ -165,23 +165,23 @@ public class TicketService {
 
 
 
-    private void sendConfirmationEmail(User user, Show show, String bookedSeats) {
-        SimpleMailMessage simpleMessageMail = new SimpleMailMessage();
-        String body = "Hi " + user.getName() + " ! \n" +
-                "You have successfully booked a ticket. Please find the following details:\n" +
-                "Booked seat numbers: " + bookedSeats + "\n" +
-                "Movie Name: " + show.getMovie().getMovieName() + "\n" +
-                "Show Date: " + show.getDate() + "\n" +
-                "Show Time: " + show.getTime() + "\n" +
-                "Enjoy the Show !!!";
-
-        simpleMessageMail.setSubject("Show Ticket Confirmation Mail");
-        simpleMessageMail.setFrom("kanhaiya.kk20598@gmail.com");
-        simpleMessageMail.setText(body);
-        simpleMessageMail.setTo(user.getEmail());
-
-        emailSender.send(simpleMessageMail);
-    }
+//    private void sendConfirmationEmail(User user, Show show, String bookedSeats) {
+//        SimpleMailMessage simpleMessageMail = new SimpleMailMessage();
+//        String body = "Hi " + user.getName() + " ! \n" +
+//                "You have successfully booked a ticket. Please find the following details:\n" +
+//                "Booked seat numbers: " + bookedSeats + "\n" +
+//                "Movie Name: " + show.getMovie().getMovieName() + "\n" +
+//                "Show Date: " + show.getDate() + "\n" +
+//                "Show Time: " + show.getTime() + "\n" +
+//                "Enjoy the Show !!!";
+//
+//        simpleMessageMail.setSubject("Show Ticket Confirmation Mail");
+//        simpleMessageMail.setFrom("");
+//        simpleMessageMail.setText(body);
+//        simpleMessageMail.setTo(user.getEmail());
+//
+//        emailSender.send(simpleMessageMail);
+//    }
 
 
     String convertListToString(List<String> seats){
